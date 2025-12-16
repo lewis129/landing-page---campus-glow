@@ -125,6 +125,14 @@ p{
     margin-bottom: 50px;
     color: black;
 }
+@media (max-width: 600px) {
+    h1{
+        font-size: 40px;
+    }
+    p{
+        font-size: 16px;
+    }
+}
 /* pintrest style grid */
 .gallery{
     columns: 4;
@@ -144,8 +152,8 @@ p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .g-btn{
-    display: block;
-    margin: 20px 500px;
+    display: flex;
+    justify-content: center;
     padding: 10px 20px;
     background-color: black;
     color: white;
@@ -192,15 +200,16 @@ p{
 }
 .card-list{
     display: flex;
+    flex-wrap: wrap;
     padding: 0px;
     margin: 0 auto;
-    padding: 20px 40px;
+    padding: 10px 5px;
     gap: 20px;
     border-radius: 10px;
 
 }
 .card{
-    padding: 50px 100px;
+    padding: 2px 30px;
 }
 .card h3{
     margin-bottom: 15px;
@@ -211,10 +220,9 @@ p{
 }
 .comment{
     background-color: #e0e0e0;
-    padding: 20px;
+    padding: 20px 30px;
     border-radius: 10px;
     margin: 20px auto;
-    max-width: 600px;
 }
 
 .process-list{
@@ -229,9 +237,31 @@ p{
     overflow-x: scroll;
 }
 .process-card{
-    padding: 50px 100px;
+    padding: 50px 30px;
     text-align: center;
     justify-content: center;
+}
+@media(max-width: 360px) {
+    .process-list{
+        flex-direction: column;
+        columns: 2;
+        align-items: center;
+
+    }
+    .process-card{
+        display: block;
+        flex-direction: column;
+        padding: 2px 1px;
+        font-size: 22px;
+        overflow: hidden;
+        gap: 10px;
+    }
+    .card{
+        padding: 5px 13px;
+    }
+    .comment{
+        width: 90%;
+    }
 }
 
 #footer {
@@ -242,8 +272,8 @@ padding: 60px 10px 20px;
   
 .footer-container {
 display: flex;
-gap: 40px;
-max-width: 1200px;
+flex-wrap: wrap;
+gap: 20px;
 margin: auto;
 }
 
