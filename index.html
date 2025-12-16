@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <ul class="side-bar">
+             <li onclick="closeSidebar()"><a href="#" ><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+             <li><a href="#">HOME</a></li>
+             <li><a href="#">PRODUCT</a></li>
+             <li><a href="#">ABOUT</a></li>
+             <li><a href="#">CONTACT</a></li>
+            </ul> 
+            <ul>
+             <li><a href="#">CAMPUS GLOW</a></li>
+             <li class="hideOnMobile"><a href="">HOME</a></li>
+             <li class="hideOnMobile"><a href="#">PRODUCT</a></li>
+             <li class="hideOnMobile"><a href="#">ABOUT</a></li>
+             <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+             <li class="menuBtn" onclick="showSidebar()"><a href="#" title="Toggle Sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul> 
+         </nav>
+         <div class="header-content">
+            <h1>Embrace Your <br>Natural Beauty</h1>
+            <p>Your one-stop shop for all campus essentials. Discover a wide range <br> of products designed to enhance your college experience.</p>
+            <a href="#" class="btn">Explore Collection -></a>
+            <a href="#" class="btn">our story</a>
+         </div>
+         <div class="icons">
+           
+         </div>
+    </section>
+    <section id="products">
+        <h2>Our Collection</h2>
+        <p>Carefully curated products design to enhance your natural radiance</p>
+        <div class="gallery">
+            <img src="images/image1.jpg" alt="">
+            <img src="images/image2.jpg" alt="">
+            <img src="images/image3.jpg" alt="">
+            <img src="images/image4.jpg" alt="">
+            <img src="images/image5.jpg" alt="">
+            <img src="images/image6.jpg" alt="">
+            <img src="images/image7.jpg" alt="">
+        </div>
+        <div class="g-btn" href="">view all products</div>
+    </section>
+    <section id="about">
+        <h2>Our Philosophy</h2>
+        <p>Beauty that comes form within, enhanced by nature</p>
+        <div class="card-list">
+            <div class="card">
+            <h3>natural & pure</h3>
+            <p2>So perhaps, you've generated some fancy text, and you're content that you can now copy
+                and paste your fancy text in the comments section of funny cat videos, 
+                but perhaps you're wondering how it's even possible to change the font of your text?
+                Is it some sort of hack? Are you copying and pasting an actual font?</p>
+            </div>
+            <div class="card">
+                <h3>natural & pure</h3>
+                <p2>So perhaps, you've generated some fancy text, and you're content that you can now copy
+                    and paste your fancy text in the comments section of funny cat videos, 
+                    but perhaps you're wondering how it's even possible to change the font of your text?
+                    Is it some sort of hack? Are you copying and pasting an actual font?</p>
+            </div>
+        </div>
+        <div class="comment">
+            <p>"I absolutely love the products from Campus Glow! They have transformed my skincare routine and boosted my confidence. Highly recommend to anyone looking for natural beauty solutions."</p>
+            <h3>- Sarah M.</h3>
+        </div>
+        <div class="process-list">
+            <div class="process-card">
+                <h4>100%</h4>
+                <p>natural ingredients</p>
+            </div>
+            <div class="process-card">
+                <h4>0%</h4>
+                <p>harsh chemical</p>
+            </div>
+            <div class="process-card">
+                <h4>bin</h4>
+                <p>eco friendly</p>
+            </div>
+            <div class="process-card">
+                <h4>cat</h4>
+                <p>cruelty-free</p>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer-container">
+        <!-- Brand -->
+            <div class="footer-brand">
+               <h2>Campus Glow</h2>
+               <p>Elevating your daily beauty rituals with natural, luxurious personal care products.</p>
+            </div>
+        
+            <!-- Shop -->
+            <div class="footer-links">
+              <h4>Shop</h4>
+              <a href="#">All Products</a>
+              <a href="#">Fragrances</a>
+              <a href="#">Skincare</a>
+              <a href="#">Body Care</a>
+            </div>
+        
+            <!-- Company -->
+            <div class="footer-links">
+              <h4>Company</h4>
+              <a href="#">Our Story</a>
+              <a href="#">Sustainability</a>
+              <a href="#">Ingredients</a>
+              <a href="#">Contact Us</a>
+            </div>
+        
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+              <h4>Stay Connected</h4>
+              <p>Subscribe to receive updates and exclusive offers.</p>
+        
+              <div class="newsletter-box">
+                <input type="email" placeholder="Your email">
+                <button aria-label="Subscribe">
+                  
+                </button>
+              </div>
+        
+              <div class="socials">
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+              </div>
+            </div>
+        
+          </div>
+        
+          <div class="footer-bottom">
+            <p>© 2024 Campus Glow. All rights reserved.</p>
+            <div class="footer-legal">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Shipping Info</a>
+            </div>
+          </div>
+    </footer>
+</body>
+<script>
+    function showSidebar(){
+       const Sidebar = document.querySelector('.side-bar').style.display = 'flex'
+    }
+    function closeSidebar(){
+       const sidebar = document.querySelector('.side-bar').style.display = 'none'
+    }
+</script>
+</html>   
