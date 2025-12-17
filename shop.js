@@ -15,19 +15,26 @@ document.addEventListener("DOMContentLoaded", () => {
             const rows = csv.split("\n").slice(1); // Skip header row
 
             rows.forEach(row => {
-                const [name, price, image, type, active] = row.split(",");
+                const colomns = row.split(",")
+                const name = colomns[0]?.trim();
+                const type = colomns[1]?.trim();
+                const image = colomns[2]?.trim().replace(/^"|$/g, "");
+                const price = colomns[3]?.trim();
+                const active = colomns[4]?.trim();
 
                 if (active?.trim() !== "yes") return; // Skip inactive products
 
                 productList.innerHTML += `
                 <div class="product-card">
-                    <img src="${image || "https://via.placeholder.com/150"}" alt="${name}">
-                    <h4 class="product-type">${type}</h4>
-                    <h3>${name}</h3>
-                    <p>KSh ${price}</p>
-                    <button class="order-btn" onclick="orderOnWhatsapp('${name}', ${price})">
-                        Order on WhatsApp
-                    </button>
+                    <img src="${image || "https://via.placeholder.com/150"}" alt="${name}" class="product-image"/>
+                    <div class="product-details">
+                        <p class="product-type">${type}</p>
+                        <h3 class="product-name">${name}</h3>
+                        <p class="product-cost">KSh ${price}</p>
+                        <button class="add-to-cart" onclick="orderOnWhatsapp('${name}', ${price})">
+                            Order on WhatsApp
+                        </button>
+                    </div>
                 </div>
                 `;
             });
