@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
     background-color: #f5f5f5;
     min-height: 100vh;
-    background-image: url(laptop.jpg);
+    /* background-image: url(laptop.jpg); */
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -152,15 +152,16 @@ p{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .g-btn{
-    display: flex;
-    justify-content: center;
-    padding: 10px 100px;
-    background-color: black;
-    color: white;
-    text-decoration: none;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: rgb(119, 116, 116);
+    color: black;
+    border: 2px solid white;
     border-radius: 25px;
+    cursor: pointer;
     width: fit-content;
-    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 .g-btn:hover{
@@ -201,6 +202,7 @@ p{
 }
 .card-list{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 0px;
     margin: 0 auto;
@@ -223,26 +225,27 @@ p{
     background-color: #e0e0e0;
     padding: 20px 30px;
     border-radius: 10px;
-    margin: 20px 30px;
+    margin: 20px 150px;
+    height: fit-content;
 }
 
 .process-list{
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 0px 20px;
     margin: auto;
     padding: 20px 40px;
     gap: 20px;
     border-radius: 10px;
-    overflow-x: scroll;
 }
 .process-card{
     padding: 50px 30px;
     text-align: center;
     justify-content: center;
 }
-@media(max-width: 360px) {
+@media(max-width: 480px) {
     .process-list{
         flex-direction: column;
         columns: 2;
@@ -250,18 +253,20 @@ p{
 
     }
     .process-card{
-        display: block;
+        display: flex;
         flex-direction: column;
         padding: 2px 1px;
         font-size: 22px;
         overflow: hidden;
         gap: 10px;
+        width: 10px;
     }
     .card{
         padding: 5px 13px;
     }
     .comment{
-        width: 90%;
+        width: 80%;
+        margin: 20px auto;
     }
 }
 
@@ -393,22 +398,26 @@ color: #fff;
 }
 }
 
-/* shope page */
+/* shop page */
 #shop{
     padding: 20px 0px;
 }
-#shop h2{
+.shop-container{
+    padding: 0px 30px;
+}
+.shop-container h2{
     padding: 0px 20px;
     margin-bottom: 5px;
     color: black;
-    font-weight: 100px;
-    font-size: 70px;
+    font-weight: 400;
+    font-size: 50px;
 }
 #shop p{
     padding: 0px 20px;
     margin-bottom: 50px;
     color: black;
     font-size: 20px;
+    font-weight: 300;
 }
 .shop-container a{
     text-decoration: none;
@@ -416,10 +425,10 @@ color: #fff;
     padding: 0px 20px;
     text-decoration: underline;
 }
-.product-list{
+#product-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 5px;
     margin-top: 50px;
     justify-content: center;
     align-items: center;
@@ -430,8 +439,8 @@ color: #fff;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 15px;
-    width: 500px;
+    margin: 5px;
+    max-width: 300px;
     background-color: white;
     padding: 0px 1px;
     border-radius: 10px;
@@ -441,20 +450,38 @@ color: #fff;
 .product-card img{
     width: 100%;
     overflow: hidden;
-    height: 350px ;
+    height: 150px ;
     border-radius: 10px;
     object-fit: cover;
+    transition: all 0.3s ease;
 }
-.product-card button{
+.product-card img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.product-type{
+    font-size: 14px;
+    font-weight: 200;
+    color: gray;
+    margin: 10px 0px 5px 0px;
+}
+.order-btn{
     border: white;
+    border-radius: 20px;
+    margin: 0px 40px;
     text-align: center;
     justify-content: center;
-    padding: 5px 20px;
+    padding: 10px 20px;
     margin-bottom: 20px;
+}
+.order-btn:hover{
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 @media (max-width: 480px) {
-    .product-list{
+    #product-list{
         gap: 10px; 
         padding: 0px 2px; 
         display: grid;
