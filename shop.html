@@ -24,11 +24,29 @@
          <li class="menuBtn" onclick="showSidebar()"><a href="#" title="Toggle Sidebar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
         </ul> 
      </nav>
+     <section>
+        
+     </section>
     <section id="shop">
         <div class="shop-container">
             <a href="index.html" class="main-a"> Back to home </a>
-            <h2 main-h> All products</h2>
-            <p main-p>Discover our complete collection of luxurious persanal care product</p>
+            <h2 class="main-h"> All products</h2>
+            <p class="main-p">Discover our complete collection of luxurious persanal care product</p>
+            <section>
+                <input type="text" id="search-input" placeholder="Search products...">
+                <div class="filter-buttons">
+                    <span data-category="all">all</span>
+                    <span data-category="smart collection">smart collection</span>
+                    <span data-category="skincare">Skincare</span>
+                    <span data-category="body splash">body mist</span>
+                    <span data-category="Moisturizer">Moisturizer</span>
+                    <span data-category="mini luxary">mini luxary</span>
+                    <span data-category="hand care">Hand care</span>
+                    <span data-category="sun cream">sun cream</span>
+                    <span data-category="body lotion">body lotion</span>
+
+                </div>
+            </section>
             <div id="product-list">
                 <!-- Add more product-card divs here -->
             </div>
@@ -91,8 +109,7 @@
             </div>
           </div>
     </footer>
-    <script src="product.js"></script>
-    <script src="shop.js"></script>
+        <script src="shop.js"></script>
 </body>
 
 </html>
