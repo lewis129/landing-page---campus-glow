@@ -110,7 +110,30 @@ function changeQty(index, change){
     //update the elements inner text with new quantity
     qtyE1.innerText = qty;
 }
+//lightbox functionality
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightbox-img");
+const lightboxName = document.getElementById("lightbox-name");
+const lightboxClose = document.getElementById("lightbox-close"); 
 
+function openLightbox(imageSrc,){
+    lightboxImage.src = imageSrc;
+    lightbox.classList.remove("hidden")
+}
+function closeLightbox(){
+    lightboxImage.src ="";
+    lightbox.classList.add("hidden");
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+lightbox.addEventListener("click", (e) => {
+    if(e.target === lightbox){
+        closeLightbox();
+    }
+});
+
+
+//render products function
 function renderProducts(products){
     const productList = document.getElementById("product-list");
     productList.innerHTML = "";//clear existing products
@@ -124,12 +147,12 @@ function renderProducts(products){
         productList.innerHTML += `
         <div class="product-card">
             <div class="image-container">
-                <img src="${product.image || "campusglowlogo.jpg"}" alt="${product.name}" class="product-image"/>
+                <img src="${product.image || "campusglowlogo.jpg"}" alt="${product.name}" class="product-image" onclick="openLightbox('${product.image}')"/>
                 <p class="product-cost price-overlay">KSh ${product.price}</p>
                 <p class="product-type product-type-overlay">${product.type}</p>
             </div>
             <div class="product-details">
-                <h3 class="product-name">${product.name}</h3>
+                <h3 class="product-name" onclick="openLightbox('${product.name}')">${product.name}</h3>
                     <button class="q-btn" onclick="changeQty(${index}, -1)">-</button>
                     <span id="qty-${index}">1</span>
                     <button class="q-btn" onclick="changeQty(${index}, 1)">+</button>

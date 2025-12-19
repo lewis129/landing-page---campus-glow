@@ -90,22 +90,20 @@
             <span data-category="body lotion">body lotion</span>
         </div>
         <div id="product-list">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="image2.jpg" alt="Product Image" class="product-image">
-                    <div class="price-overlay">$99.99</div> <!-- Price overlaid on image -->
-                    <div class="product-type-overlay">electronics</div> <!-- Popular indicator -->
-                </div>
-                <div class="product-details">
-                    <h3 class="product-name">Wireless Headphones</h3>
-                    <div class="product-actions">
-                        <button class="add-to-cart">Order Now</button>
-                    </div>
-                    
-                </div>
             </div>
         </div>
     </section>
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-content">
+            <span id="lightbox-close">&times</span>
+            <img id="lightbox-img" src="" alt="product-preview">
+            <div class="product-details">
+                <h3 id="lightbox-name"></h3>
+                <p id="lightbox-price"></p>
+            </div>
+            <p id="lightbox-name"></p>
+        </div>
+    </div>
 <script src="shop.js"></script>
 </body>
 </html>
