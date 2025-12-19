@@ -123,17 +123,19 @@ function renderProducts(products){
     products.forEach((product,index ) => {
         productList.innerHTML += `
         <div class="product-card">
-            <img src="${product.image || ""}" alt="${product.name}" class="product-image"/>
+            <div class="image-container">
+                <img src="${product.image || "campusglowlogo.jpg"}" alt="${product.name}" class="product-image"/>
+                <p class="product-cost price-overlay">KSh ${product.price}</p>
+                <p class="product-type product-type-overlay">${product.type}</p>
+            </div>
             <div class="product-details">
-                <p class="product-type">${product.type}</p>
                 <h3 class="product-name">${product.name}</h3>
-                <p class="product-cost">KSh ${product.price}</p>
-                <div class="product-actions">
                     <button class="q-btn" onclick="changeQty(${index}, -1)">-</button>
                     <span id="qty-${index}">1</span>
                     <button class="q-btn" onclick="changeQty(${index}, 1)">+</button>
+                    <div class="product-actions">
                     <button class="add-to-cart" onclick="orderOnWhatsapp('${product.name}', ${product.price}, ${index})">
-                        Order on WhatsApp
+                        Order Now
                     </button>
                 </div>
             </div>
