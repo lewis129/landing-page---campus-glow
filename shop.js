@@ -116,7 +116,7 @@ const lightboxImage = document.getElementById("lightbox-img");
 const lightboxName = document.getElementById("lightbox-name");
 const lightboxClose = document.getElementById("lightbox-close"); 
 
-function openLightbox(imageSrc,){
+function openLightbox(imageSrc){
     lightboxImage.src = imageSrc;
     lightbox.classList.remove("hidden")
 }
@@ -152,7 +152,7 @@ function renderProducts(products){
                 <p class="product-type product-type-overlay">${product.type}</p>
             </div>
             <div class="product-details">
-                <h3 class="product-name" onclick="openLightbox('${product.name}')">${product.name}</h3>
+                <h3 class="product-name">${product.name}</h3>
                     <button class="q-btn" onclick="changeQty(${index}, -1)">-</button>
                     <span id="qty-${index}">1</span>
                     <button class="q-btn" onclick="changeQty(${index}, 1)">+</button>
